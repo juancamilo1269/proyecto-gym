@@ -1,0 +1,411 @@
+:root{
+    --red:#FF2E63;
+    --black:#252A34;
+    --blue:#09092f;
+    --white:#EAEAEA;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background:#fff ;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/**menu de navegacion **/
+#header{
+    position: relative;
+    width: 100%;
+
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background:white;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+}
+.menu .logo-box{
+    margin-left: 20px;
+}
+.menu .logo-box h1 a{
+    
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+
+.menu .list-container .list{
+    display: flex;
+}
+.menu .list-container .list li{
+    list-style: none;
+}
+.menu .list-container .list li a{
+    text-decoration: none;
+    margin:0px 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 19px;
+    transition: 0.3s;
+}
+.menu .list-container .list li a.activo{
+    background: var(--red);
+    color: #fff;
+
+}
+
+.menu .list-container .list li a:hover{
+    background: var(--red);
+    color: #fff;
+
+}
+
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+
+/**menu de navegacion **/
+.main{
+    padding: 20px;
+}
+
+/**Slider**/
+
+.container-slider{
+
+   
+    margin: 50px 0;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.slider{
+    display: flex;
+    width: 400%;
+    height: 400px;
+    margin-left: -100%;
+
+}
+
+.slider:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.slider__section{
+    width: 100%;
+    position: relative;
+
+}
+
+.slider img{
+   
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+
+}
+
+.slider__btn:hover{
+    background: var(--red);
+
+}
+
+.slider__btn--left{
+
+    left: 10px;
+
+}
+
+.slider__btn--right{
+
+    right: 10px;
+}
+
+/** contenido slider **/
+.slider__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translatey(-50%, -50%);
+    width: 50%;
+    text-align: center;
+    z-index: 999;
+}
+
+.slider__title{
+    font-size: 2.2em;
+    margin: 0;
+
+}
+
+.slider__txt{
+    margin: 5px 0;
+}
+
+.slider__link{
+    display: block;
+    border: 1px solid var(--red);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 10px auto;
+}
+
+
+/** contenido slider **/
+/**Slider**/
+
+/**estilos de productos**/
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.product:before {
+    content: "new";
+    background: var(--red);
+    padding: 10px;
+    width: 60px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: #fff;
+}
+.product__img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product__title{
+    text-align: center;
+
+}
+.producto__price{
+    color: var(--red);
+    font-weight: bold;
+}
+.porduct__icon{
+
+    display: block;
+    margin-top: 10px;
+
+}
+.container-editor{
+    margin-top: 50PX;
+   
+}
+/**estilos de productos**/
+
+/** slider tips **/
+
+.container-slidertips{
+    margin: 50px 0;
+    overflow: hidden;
+    position: relative;
+}
+.slidertips{
+    display: flex;
+    width: 400%;
+    height: 400px;
+    margin-left: -100%;
+    text-align: center;
+}
+
+.slidertips:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__sectiontips{
+    width: 100%;
+    position: relative;
+}
+
+
+.slider__btntips{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+.slider__btntips:hover{
+    background: var(--red);
+}
+
+.slider__btntips--left{
+
+    left: 10px;
+
+}
+
+.slider__btntips--right{
+
+    right: 10px;
+}
+.slider__contenttips{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translatey(-50%, -50%);
+    width: 50%;
+    text-align: center;
+    z-index: 999;
+}
+
+.slider__titletips{
+    font-size: 2.2em;
+    margin: 0;
+
+}
+.slider__txttips{
+    margin: 5px 0;
+}
+
+.slider__linktips{
+    display: block;
+    border: 1px solid var(--red);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 10px auto;
+}
+
+
+/** slider tips **/
+
+
+
+/** entenamientos **/
+.editor__item{
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.editor__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.editor__circle{
+    width: 220px;
+    height: 220px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -200px;
+    right: -250px;
+    color: white;
+    padding: 20px;
+    padding-bottom: 70px;
+    padding-right: 70px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.editor__item:hover .editor__circle{
+    transform: scale(1.2);
+    bottom: -90px;
+    right: -40px;
+}
+
+.editor__item:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.editor__item:hover:before{
+    opacity: 1;
+}
+/** entenamientos **/
